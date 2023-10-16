@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -845,12 +845,16 @@
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
         </nav>
-    </div>
+    </div>@extends('layout')
+
+@section('content')
+
     <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+        @yield('content');
 
-
-        Content Placeholder
     </div>
+
+    @yield('scripts')
 </body>
 
 </html>
